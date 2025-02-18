@@ -22,7 +22,9 @@ button {
   cursor: pointer;
 }
 #wrapper {
-  width: 320px;
+  /* width: 320px; */
+  min-width: 320px;
+  max-width: 748px;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -49,6 +51,10 @@ a {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+}
+.pointer:hover {
+  transition: 0.5s;
+  margin-top: -10px;
 }
 .header__logo,
 .header__menuBurger:hover {
@@ -114,12 +120,16 @@ a {
   width: max-content;
   margin-right: 32px;
 }
-.servise__infoBlock__serch-list > li:first-child > a {
+.servise__infoBlock__serch-list > li > a {
   display: block;
   padding: 14px;
-  border: 3px solid #b8ffec;
-  border-radius: 10px;
   margin-right: 10px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+.servise__infoBlock__serch-list > li:hover > a {
+  transition: 0.3s;
+  border: 3px solid #b8ffec;
 }
 .servise__infoBlock__text {
   display: grid;
@@ -127,7 +137,13 @@ a {
   grid-column: span 1;
 }
 .servise__infoBlock__text-left {
-  width: 280px;
+  /* width: 280px; */
+  min-width: 280px;
+  max-width: 748px;
+}
+.servise__infoBlock__text-right > img {
+  width: 100%;
+  height: auto;
 }
 .servise__infoBlock__text-left > p {
   color: #1b1c21;
@@ -140,10 +156,16 @@ a {
   background-color: transparent;
   border: 0px;
   margin: 0px 0px 20px 20px;
+  height: 30px;
+}
+.servise__infoBlock__text-left > button:hover > img {
+  transition: 0.3s;
+  margin-top: 10px;
 }
 .servise__infoBlock__text-left > button > img {
   padding-right: 10px;
   width: 10px;
+  transition: 0.3s;
 }
 .vibe::before {
   content: "";
@@ -164,7 +186,8 @@ a {
 
 @media (width > 768px) {
   #wrapper {
-    width: 768px;
+    min-width: 768px;
+    max-width: 1100px;
     overflow: hidden;
     margin: 0 auto;
   }
@@ -186,12 +209,10 @@ a {
     align-items: center;
   }
   .servise__infoBlock__text-left {
-    width: 320px;
+    min-width: 320px;
+    max-width: 1100px;
   }
-  .servise__infoBlock__text-right > img {
-    width: 380px;
-    height: 250px;
-  }
+
   .header__dopMenu-list {
     display: block;
   }
@@ -205,7 +226,8 @@ a {
 }
 @media (width > 1120px) {
   #wrapper {
-    width: 1120px;
+    min-width: 1120px;
+    max-width: 1920px;
     overflow: hidden;
     margin: 0 auto;
   }
@@ -223,10 +245,6 @@ a {
   .servise__infoBlock__text-left > p {
     font-size: 14px;
   }
-  .servise__infoBlock__text-right > img {
-    width: 560px;
-    height: 300px;
-  }
   .servise__menu-buttons {
     display: block;
   }
@@ -234,6 +252,9 @@ a {
     content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
   }
   .servise__infoBlock__serch-list {
+    min-width: 320px;
+    max-width: 1920px;
+    justify-content: space-between;
     overflow-x: hidden;
   }
   .servise__infoBlock > .flex {
