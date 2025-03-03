@@ -1,0 +1,263 @@
+/* body {
+  overflow-y: hidden;
+} */
+@font-face {
+  font-family: "TT Lakes";
+  src: url("/fonts/TTLakes-Medium.eot");
+  src: local("/fonts/TT Lakes Medium"), local("/fonts/TTLakes-Medium"),
+    url("/fonts/TTLakes-Medium.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/TTLakes-Medium.woff2") format("woff2"),
+    url("/fonts/TTLakes-Medium.woff") format("woff"),
+    url("/fonts/TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  font-family: "TT Lakes";
+}
+.flex {
+  display: flex;
+}
+button {
+  cursor: pointer;
+}
+#wrapper {
+  /* width: 320px; */
+  min-width: 320px;
+  max-width: 748px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.header__menu-list {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: #7e7e82;
+}
+.header {
+  height: 88px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pointer {
+  background-color: #ff3e79;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.pointer:hover {
+  transition: 0.5s;
+  margin-top: -10px;
+}
+.logo,
+.header__menuBurger:hover {
+  cursor: pointer;
+}
+.header__menuBurger-line {
+  margin-top: 0.2rem;
+  width: 18px;
+  height: 2px;
+  margin: 8px 15px;
+  background-color: #fff;
+}
+.header__menuBurger-line:first-child {
+  margin-top: 12px;
+}
+.header__menuBurger-line:nth-child(2) {
+  width: 14px;
+}
+.header__menu-item {
+  margin-right: 5px;
+}
+.header__menu-item > a > img {
+  margin: 15px;
+}
+
+.visible {
+  display: none;
+  margin-left: 28px;
+}
+.header__palka {
+  width: 4px;
+  height: 44px;
+  background-color: #eaeaea;
+  margin-right: 28px;
+  margin-top: 4px;
+}
+.header__dopMenu-list {
+  display: none;
+}
+
+/* next section */
+.servise {
+  background-color: #f8f8f8;
+}
+.servise__infoBlock__serch,
+.servise__infoBlock__text-left {
+  padding: 10px;
+}
+
+.servise__infoBlock__zaglov {
+  font-size: 18px;
+}
+.servise__infoBlock__zaglov > h1 {
+  padding-left: 18px;
+  border-left: 3px solid #41f6d7;
+  border-radius: 0px 25px 25px 0px;
+}
+.servise__infoBlock__serch-list {
+  overflow-x: scroll;
+}
+.servise__infoBlock__serch-list > li > a {
+  display: block;
+  width: max-content;
+  margin-right: 32px;
+}
+.servise__infoBlock__serch-list > li > a {
+  display: block;
+  padding: 14px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+.servise__infoBlock__serch-list > li:hover > a {
+  transition: 0.3s;
+  border: 3px solid #b8ffec;
+}
+.servise__infoBlock__text {
+  display: grid;
+  /* gap: 10px; */
+  grid-column: span 1;
+}
+.servise__infoBlock__text-left {
+  /* width: 280px; */
+  min-width: 280px;
+  max-width: 748px;
+}
+.servise__infoBlock__text-right{
+  width: 100%;
+  height: auto;
+}
+.servise__infoBlock__text-left > p {
+  color: #1b1c21;
+  font-size: 14px;
+  font-weight: 300;
+}
+.servise__infoBlock__text-left > button {
+  font-size: 18px;
+  font-weight: 500;
+  background-color: transparent;
+  border: 0px;
+  margin: 0px 0px 20px 20px;
+  height: 30px;
+}
+.servise__infoBlock__text-left > button:hover > .servise__img {
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.servise__img {
+  padding-right: 10px;
+  width: 10px;
+  transition: 0.3s;
+}
+.vibe::before {
+  content: "";
+}
+.servise__menu-buttons {
+  display: none;
+}
+.servise__menu-buttons {
+  padding: 15px;
+}
+.header__menu-item {
+  display: flex;
+}
+.header__menu-item > p {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+@media (width > 768px) {
+  #wrapper {
+    min-width: 768px;
+    max-width: 1100px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .servise__infoBlock__text {
+    margin-top: 20px;
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vibe::before {
+    content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера";
+  }
+  .visible {
+    display: block;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .servise__infoBlock__text-left {
+    min-width: 320px;
+    max-width: 1100px;
+  }
+
+  .header__dopMenu-list {
+    display: block;
+  }
+  .flex:nth-child(2) {
+    margin-top: 10px;
+    gap: 180px;
+  }
+  .header__dopMenu-list > ul {
+    gap: 10px;
+  }
+}
+@media (width > 1120px) {
+  #wrapper {
+    min-width: 1120px;
+    max-width: 1920px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .header {
+    display: none;
+  }
+  .servise__infoBlock__text {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .servise__infoBlock__text-left {
+    width: 490px;
+  }
+  .servise__infoBlock__text-left > p {
+    font-size: 14px;
+  }
+  .servise__menu-buttons {
+    display: block;
+  }
+  .vibe::before {
+    content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
+  }
+  .servise__infoBlock__serch-list {
+    min-width: 320px;
+    max-width: 1920px;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+  .servise__infoBlock > .flex {
+    justify-content: space-between;
+  }
+}
