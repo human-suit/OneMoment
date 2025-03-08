@@ -28,12 +28,18 @@ button {
   overflow: hidden;
   margin: 0 auto;
 }
+.flex:first-child{
+  gap: 20px;
+}
 .header__menu-list {
   align-items: center;
   list-style: none;
   display: flex;
   margin: 0px;
   padding: 0px;
+}
+.header__menu{
+  display: flex;
 }
 a {
   text-decoration: none;
@@ -88,7 +94,7 @@ a {
   width: 4px;
   height: 44px;
   background-color: #eaeaea;
-  margin-right: 28px;
+  margin-right: 8px;
   margin-top: 4px;
 }
 .header__dopMenu-list {
@@ -99,8 +105,8 @@ a {
 .servise {
   background-color: #f8f8f8;
 }
-.servise__infoBlock__serch,
-.servise__infoBlock__text-left {
+.servise__infoBlock__navigate,
+.servise__left {
   padding: 10px;
 }
 
@@ -112,22 +118,22 @@ a {
   border-left: 3px solid #41f6d7;
   border-radius: 0px 25px 25px 0px;
 }
-.servise__infoBlock__serch-list {
-  overflow-x: scroll;
+.servise__list {
+  display: ruby;
 }
-.servise__infoBlock__serch-list > li > a {
+.servise__list > li > a {
   display: block;
   width: max-content;
   margin-right: 32px;
 }
-.servise__infoBlock__serch-list > li > a {
+.servise__list > li > a {
   display: block;
   padding: 14px;
   margin-right: 10px;
   border-radius: 10px;
   border: 3px solid transparent;
 }
-.servise__infoBlock__serch-list > li:hover > a {
+.servise__list > li:hover > a {
   transition: 0.3s;
   border: 3px solid #b8ffec;
 }
@@ -136,21 +142,21 @@ a {
   /* gap: 10px; */
   grid-column: span 1;
 }
-.servise__infoBlock__text-left {
+.servise__left {
   /* width: 280px; */
   min-width: 280px;
-  max-width: 748px;
+  
 }
 .servise__infoBlock__text-right{
   width: 100%;
   height: auto;
 }
-.servise__infoBlock__text-left > p {
+.servise__left > p {
   color: #1b1c21;
   font-size: 14px;
   font-weight: 300;
 }
-.servise__infoBlock__text-left > button {
+.servise__left > button {
   font-size: 18px;
   font-weight: 500;
   background-color: transparent;
@@ -158,7 +164,7 @@ a {
   margin: 0px 0px 20px 20px;
   height: 30px;
 }
-.servise__infoBlock__text-left > button:hover > .servise__img {
+.servise__left > button:hover > .servise__img {
   transition: 0.3s;
   margin-top: 10px;
 }
@@ -208,17 +214,13 @@ a {
     justify-content: space-between;
     align-items: center;
   }
-  .servise__infoBlock__text-left {
-    min-width: 320px;
-    max-width: 1100px;
-  }
 
   .header__dopMenu-list {
     display: block;
   }
   .flex:nth-child(2) {
     margin-top: 10px;
-    gap: 180px;
+    gap: 30px;
   }
   .header__dopMenu-list > ul {
     gap: 10px;
@@ -239,10 +241,7 @@ a {
     gap: 10px;
     grid-template-columns: repeat(2, 1fr);
   }
-  .servise__infoBlock__text-left {
-    width: 490px;
-  }
-  .servise__infoBlock__text-left > p {
+  .servise__left > p {
     font-size: 14px;
   }
   .servise__menu-buttons {
@@ -251,9 +250,10 @@ a {
   .vibe::before {
     content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
   }
-  .servise__infoBlock__serch-list {
+  .servise__list {
     min-width: 320px;
     max-width: 1920px;
+    display: flex;
     justify-content: space-between;
     overflow-x: hidden;
   }
