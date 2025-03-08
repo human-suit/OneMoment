@@ -1,3 +1,4 @@
+
 /* body {
   overflow-y: hidden;
 } */
@@ -34,12 +35,9 @@ button {
 .header__menu-list {
   align-items: center;
   list-style: none;
-  display: flex;
+  display: ruby;
   margin: 0px;
   padding: 0px;
-}
-.header__menu{
-  display: flex;
 }
 a {
   text-decoration: none;
@@ -94,7 +92,7 @@ a {
   width: 4px;
   height: 44px;
   background-color: #eaeaea;
-  margin-right: 8px;
+  margin-right: 28px;
   margin-top: 4px;
 }
 .header__dopMenu-list {
@@ -119,7 +117,7 @@ a {
   border-radius: 0px 25px 25px 0px;
 }
 .servise__list {
-  display: ruby;
+  overflow-x: scroll;
 }
 .servise__list > li > a {
   display: block;
@@ -145,7 +143,6 @@ a {
 .servise__left {
   /* width: 280px; */
   min-width: 280px;
-  
 }
 .servise__infoBlock__text-right{
   width: 100%;
@@ -219,8 +216,7 @@ a {
     display: block;
   }
   .flex:nth-child(2) {
-    margin-top: 10px;
-    gap: 30px;
+    gap: 20px;
   }
   .header__dopMenu-list > ul {
     gap: 10px;
@@ -247,13 +243,15 @@ a {
   .servise__menu-buttons {
     display: block;
   }
+  .header__menu-list{
+    display: flex;
+  }
   .vibe::before {
     content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
   }
   .servise__list {
     min-width: 320px;
     max-width: 1920px;
-    display: flex;
     justify-content: space-between;
     overflow-x: hidden;
   }
